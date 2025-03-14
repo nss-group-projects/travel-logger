@@ -15,7 +15,7 @@ This project is a travel logging site for digital nomads, allowing users to:
 
 ### Getting Started
 
-1. Clone this repository
+1. Create a new repository using this template. Then each group member should clone that repository.
 2. **Important**: Update the database connection string in `appsettings.Development.json` with your actual PostgreSQL password:
    ```json
    "TravelLoggerDbConnectionString": "Host=localhost;Port=5432;Database=TravelLogger;Username=postgres;Password=YourActualPasswordHere"

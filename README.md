@@ -70,7 +70,7 @@ Note: We've configured the application to use HTTP instead of HTTPS for simplici
 - `DELETE /api/upvotes/{id}` - Remove an upvote from a recommendation
 
 ## Development Notes
-
+- Begin by considering the data structure, building an Entity Relationship Diagram, and laying out tasks in a Github project board.
 - Include all API endpoints in Program.cs. Yes, this will cause conflicts to resolve in GIT as you divide tasks and work independently. Yes, this is intentional, to put you through the ringer practicing GIT workflow with proper pull requests.
 - Entity Framework Core should be used for database operations, and the database should be seeded with initial data for cities, users, logs, recommendations, and upvotes
 - DTOs should be used to limit the properties that are sent and received

@@ -1,5 +1,7 @@
 # Travel Logger - Digital Nomad Travel Logging Site
 
+Using .NET 10? See the `net10` branch. When you create your repository with "Use this template", tick "Include all branches", then run `git checkout net10` after cloning.
+
 A .NET CRUD API for digital nomads to log their travels, share recommendations, and connect with other travelers.
 
 ## Project Overview

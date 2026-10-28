@@ -16,10 +16,11 @@ This project is a travel logging site for digital nomads, allowing users to:
 ### Getting Started
 
 1. Create a new repository using this template. Then each group member should clone that repository.
-2. **Important**: Update the database connection string in `appsettings.Development.json` with your actual PostgreSQL password:
-   ```json
-   "TravelLoggerDbConnectionString": "Host=localhost;Port=5432;Database=TravelLogger;Username=postgres;Password=YourActualPasswordHere"
+2. **Important**: Each group member stores the database connection string in their own user secrets (not in `appsettings.Development.json`, which is shared through git). From the project folder, run this with your actual PostgreSQL password:
+   ```bash
+   dotnet user-secrets set 'TravelLoggerDbConnectionString' 'Host=localhost;Port=5432;Username=postgres;Password=<your_postgresql_password>;Database=TravelLogger'
    ```
+   See [User Secrets and Signing In by Email](./AUTH-AND-USER-SECRETS.md) for why, and what to skip from Creek River's setup.
 3. Run the following commands to set up the database. The first command, `dotnet restore`, downloads the project's NuGet packages. A fresh clone doesn't have them yet, and `dotnet ef` won't download them for you, so without this step it fails with a `NETSDK1004: Assets file ... not found` error.
 
 ```bash
@@ -75,4 +76,4 @@ Note: We've configured the application to use HTTP instead of HTTPS for simplici
 - Include all API endpoints in Program.cs. Yes, this will cause conflicts to resolve in GIT as you divide tasks and work independently. Yes, this is intentional, to put you through the ringer practicing GIT workflow with proper pull requests.
 - Entity Framework Core should be used for database operations, and the database should be seeded with initial data for cities, users, logs, recommendations, and upvotes
 - DTOs should be used to limit the properties that are sent and received
-- Authentication should just use email as a unique identifier. Make sure users can't edit or delete other users' data.
+- Authentication should just use email as a unique identifier. Make sure users can't edit or delete other users' data. [User Secrets and Signing In by Email](./AUTH-AND-USER-SECRETS.md) walks through how to do this with what you've learned so far.
